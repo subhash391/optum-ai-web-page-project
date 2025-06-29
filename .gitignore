@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+# Build output
+/dist
+/build
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Environment
+.env
+.env.*
+
+# Misc
+*.log
+*.tmp
+*.swp
+
+# Ignore coverage
+coverage/
+
+# Ignore local images or large assets (optional)
+# public/img/
