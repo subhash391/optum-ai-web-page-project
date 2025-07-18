@@ -63,3 +63,18 @@ animation: fadeIn 0.5s ease-out;
 .chat-message-user {
 animation: fadeIn 0.5s ease-out;
 }
+
+/* Optum logo standard size for header */
+.header-logo {
+height: 2rem;
+width: auto;
+object-fit: contain;
+margin-right: 0.5rem;
+}
+/* Optional: reduce header padding for compact look */
+.header-compact {
+padding-top: 0.75rem;
+padding-bottom: 0.75rem;
+padding-left: 1.5rem;
+padding-right: 1.5rem;
+}

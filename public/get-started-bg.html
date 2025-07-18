@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started - Optum AI SaaS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/styles.css">
+  <link rel="icon" type="image/png" href="img/uhg_logo.png">
+  <style>
+    body {
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .get-started-container {
+      max-width: 600px;
+      margin: 6rem auto;
+      background: rgba(255,255,255,0.92);
+      border-radius: 18px;
+      box-shadow: 0 4px 24px 0 rgba(99,102,241,0.10);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .get-started-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #6366f1;
+      margin-bottom: 1rem;
+    }
+    .get-started-desc {
+      color: #64748b;
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
+    }
+    .get-started-btn {
+      background: linear-gradient(90deg, #8b5cf6, #ec4899);
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      padding: 0.75rem 2rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px 0 rgba(139,92,246,0.12);
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .get-started-btn:hover {
+      background: linear-gradient(90deg, #6366f1, #a855f7);
+      box-shadow: 0 4px 16px 0 rgba(139,92,246,0.18);
+    }
+    /* Watermark background image */
+    .watermark-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.18;
+    }
+    .watermark-bg img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- Watermark background image -->
+  <div class="watermark-bg">
+    <img src="img/bg.png" alt="Watermark" />
+  </div>
+  <div class="get-started-container">
+    <div class="get-started-title">Welcome to Optum AI SaaS</div>
+    <div class="get-started-desc">Your journey to smarter, faster development starts here. Explore features, automate your workflow, and unlock the power of AI-driven error logging.</div>
+    <a href="get-started.html" class="get-started-btn">Continue</a>
+  </div>
+</body>
+</html>
