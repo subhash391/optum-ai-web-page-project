@@ -1,41 +1,71 @@
-# Web Page Project
+# Optum SaaS Platform
 
-This project is a simple web page that demonstrates the use of HTML and CSS. It includes a basic structure and is designed to be easily extendable.
+A modern, multi-page SaaS web application for Optum, built with modular HTML, CSS, and JavaScript. The project features a visually rich landing page, dynamic "Get Started" page, animated backgrounds, user profile/logout, responsive design, and professional UI. All assets are organized for easy maintenance and future upgrades.
+
+## Features
+- Visually rich, responsive landing page
+- Dynamic dropdowns and animated backgrounds
+- User profile and logout functionality
+- Header with logo and user profile
+- Organized assets and modular code
+- Clean, professional UI with card and shadow effects
+- Favicon and watermark support
+- Git/GitHub setup instructions
 
 ## Project Structure
-
 ```
-web-page-project
-├── public
-│   └── index.html       # Main HTML document
-├── src
-│   └── styles.css       # Styles for the web page
-├── package.json          # npm configuration file
-└── README.md             # Project documentation
+public/
+  index.html
+  get-started.html
+  get-started-bg.html
+  img/
+    optum.png
+    uhg.png
+    favicon.png
+    bg.jpg
+    ...
+src/
+  styles.css
+  scripts.js
+README.md
+project_recreation_instructions.md
+package.json
 ```
 
 ## Getting Started
+### 1. Install Dependencies
+No build dependencies required for static HTML/CSS/JS. For local server:
+```bash
+npm install -g serve
+```
 
-To get started with this project, follow these steps:
+### 2. Run the Project
+```bash
+npx serve public
+```
+Or open `public/index.html` directly in your browser.
 
-1. **Clone the repository**:
-   ```
-   git clone <repository-url>
-   cd web-page-project
-   ```
+### 3. Stop the Server
+Press `Ctrl+C` in the terminal.
 
-2. **Install dependencies**:
-   ```
-   npm install
-   ```
+## Version Control
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin <your-repo-url>
+git push -u origin master
+```
 
-3. **Open the project**:
-   Open `public/index.html` in your web browser to view the web page.
+## Recreate with React + Tailwind
+See `project_recreation_instructions.md` for step-by-step instructions to rebuild this project using React and Tailwind CSS for enhanced responsiveness and modularity.
 
-## Usage
-
-You can modify the `src/styles.css` file to change the appearance of the web page. The `public/index.html` file can be edited to update the content displayed on the page.
+## Deployment
+- Deploy on Vercel, Netlify, or GitHub Pages for best results.
 
 ## License
+This project is for demonstration and internal use only.
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+---
+
+For questions or contributions, open an issue or pull request on GitHub.
