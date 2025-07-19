@@ -1,4 +1,4 @@
-# Optum SaaS Platform
+# Optum LogAnalyzer SaaS Platform
 
 A modern, multi-page SaaS web application for Optum, built with modular HTML, CSS, and JavaScript. The project features a visually rich landing page, dynamic "Get Started" page, animated backgrounds, user profile/logout, responsive design, and professional UI. All assets are organized for easy maintenance and future upgrades.
 
@@ -47,25 +47,3 @@ Or open `public/index.html` directly in your browser.
 
 ### 3. Stop the Server
 Press `Ctrl+C` in the terminal.
-
-## Version Control
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin <your-repo-url>
-git push -u origin master
-```
-
-## Recreate with React + Tailwind
-See `project_recreation_instructions.md` for step-by-step instructions to rebuild this project using React and Tailwind CSS for enhanced responsiveness and modularity.
-
-## Deployment
-- Deploy on Vercel, Netlify, or GitHub Pages for best results.
-
-## License
-This project is for demonstration and internal use only.
-
----
-
-For questions or contributions, open an issue or pull request on GitHub.
