@@ -2,30 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get Started - Optum AI SaaS</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../src/styles.css">
-  <link rel="icon" type="image/png" href="img/favicon_uhg.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optum | AI-Powered APIs ERROR RESOLVER PLATFORM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#8b5cf6',secondary:'#ec4899'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="stylesheet" href="../src/styles.css">
+<link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
+<link rel="icon" type="image/png" href="img/favicon.png" sizes="180x180">
+<link rel="apple-touch-icon" href="img/favicon.png" sizes="180x180">
   <style>
     body {
       min-height: 100vh;
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #ebf8ff; /* Light blue background */
+      /* background-image removed from body */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .get-started-container {
-      max-width: 600px;
-      margin: 6rem auto;
+      max-width: 1200px;
+      margin: 0;
       background: rgba(255,255,255,0.92);
       border-radius: 18px;
-      box-shadow: 0 4px 24px 0 rgba(99,102,241,0.10);
+      box-shadow: 0 4px 24px 0 rgba(245, 118, 83, 0.1);
       padding: 2.5rem 2rem;
       text-align: center;
       position: relative;
       z-index: 2;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      min-height: 400px;
+    }
+    .get-started-left, .get-started-right {
+      flex: 1;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.45), 0 1px 0 rgba(0,0,0,0.25);
+    }
+    .get-started-left {
+      border-right: 1px solid #e5e7eb;
+      background: rgba(235,248,255,0.5);
+    }
+    .email-error {
+      color: #ef4444;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+      text-align: left;
     }
     .get-started-title {
       font-size: 2.25rem;
@@ -51,33 +85,65 @@
       transition: background 0.2s, box-shadow 0.2s;
     }
     .get-started-btn:hover {
-      background: linear-gradient(90deg, #6366f1, #a855f7);
+      background: linear-gradient(90deg, #de5210, #a855f7);
       box-shadow: 0 4px 16px 0 rgba(139,92,246,0.18);
-    }
-    /* Watermark background image */
-    .watermark-bg {
-      position: fixed;
-      inset: 0;
-      z-index: 1;
-      pointer-events: none;
-      opacity: 0.18;
-    }
-    .watermark-bg img {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
     }
   </style>
 </head>
-<body>
-  <!-- Watermark background image -->
-  <div class="watermark-bg">
-    <img src="img/bg.png" alt="Watermark" />
-  </div>
+<body class="bg-blue-100 text-black min-h-screen relative">
   <div class="get-started-container">
-    <div class="get-started-title">Welcome to Optum AI SaaS</div>
-    <div class="get-started-desc">Your journey to smarter, faster development starts here. Explore features, automate your workflow, and unlock the power of AI-driven error logging.</div>
-    <a href="get-started.html" class="get-started-btn">Continue</a>
+    <div class="get-started-left">
+      <form id="loginForm" autocomplete="off" style="width:100%;">
+        <div class="text-2xl font-bold mb-6 text-primary">Login</div>
+        <label for="email" class="block mb-2 font-medium" style="color:#222; text-shadow:none;">Email ID</label>
+        <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" style="color:#222; background:#fff;" placeholder="Enter your email" required>
+        <div id="emailError" class="email-error" style="display:none;"></div>
+        <button type="submit" class="get-started-btn mt-6 w-full">Login</button>
+      </form>
+    </div>
+    <div class="get-started-right">
+      <div class="get-started-title">Welcome to Optum AI SaaS</div>
+      <div class="get-started-desc">Your journey to smarter, faster development starts here. Explore features, automate your workflow, and unlock the Power of <span style="color:#ef4444;font-weight:bold;">AI-driven</span> Error Resolver.</div>
+      <img src="img/ai-driven.jpg" alt="AI" style="margin:2rem auto 0 auto;max-width:120px;width:120px;height:120px;border-radius:50%;object-fit:cover;box-shadow:0 2px 12px 0 rgba(0,0,0,0.10);display:block;" />
+    </div>
   </div>
+  <footer style="position:fixed;bottom:0;left:0;width:100%;" class="text-center py-4 text-gray-700">
+  © 2025 Optum Inc. All rights reserved
+  </footer>
 </body>
+<script>
+// Email validation logic
+const loginForm = document.getElementById('loginForm');
+const emailInput = document.getElementById('email');
+const emailError = document.getElementById('emailError');
+
+function validateEmail(email) {
+  // Only accept demo@optum.com
+  return email.trim().toLowerCase() === 'demo@optum.com';
+}
+
+loginForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const emailVal = emailInput.value.trim();
+  if (!validateEmail(emailVal)) {
+    emailError.textContent = 'Please enter a valid email address.';
+    emailError.style.display = 'block';
+    emailInput.classList.add('border-red-500');
+    return;
+  } else {
+    emailError.textContent = '';
+    emailError.style.display = 'none';
+    emailInput.classList.remove('border-red-500');
+    window.location.href = 'get-started.html';
+  }
+});
+
+emailInput.addEventListener('input', function() {
+  if (validateEmail(emailInput.value.trim())) {
+    emailError.textContent = '';
+    emailError.style.display = 'none';
+    emailInput.classList.remove('border-red-500');
+  }
+});
+</script>
 </html>
